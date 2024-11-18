@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/javafx"
+            fx:controller="org.example.flyweight.controller.GameController">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <ComboBox fx:id="mapTypeComboBox" promptText="Select Map Type" />
+            <Button text="Generate Map" onAction="#generateMap" />
+        </HBox>
+    </top>
+    <center>
+        <Canvas fx:id="mapCanvas" width="640" height="480" />
+    </center>
+    <bottom>
+        <Button text="Exit" onAction="#exitApplication" style="-fx-padding: 10;" />
+    </bottom>
+</BorderPane>
